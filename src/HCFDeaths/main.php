@@ -38,7 +38,7 @@ use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\player\PlayerDeathEvent;
 
-class Main extends PluginBase implements Listener{
+class main extends PluginBase implements Listener{
 
 public function sendStatus($msg){
 $url = "https://discordapp.com/api/webhooks/419842008283086850/7F6BfX9_lp2KU9jmz1UXoRSZnzKx0AigRV5mtsg_n9PiWX4ZNdI8Y7bDLUd-7bd47UmZ";
@@ -56,7 +56,7 @@ $this->getServer()->getPluginManager()->registerEvents($this, $this);
 $this->sendStatus($this->getServer()->getMotd() . " just enabled HCFDeaths");
 }
 
-/*public function deathBan($p, $str){
+public function deathBan($p, $str){
 $path = "deaths/";
 $file = strtolower($p);
 if(!file_exists($this->getDataFolder() . $path . $file . ".yml")){
@@ -116,7 +116,7 @@ if($current == 1){
 $this->removeLife($p);
 }
 }
-}*/
+}
 
 public function onDeath(PlayerDeathEvent $event){
 $ent = $event->getEntity();
@@ -128,12 +128,12 @@ $event->setDeathMessage("ยงe" . $ent->getName() . " was slain by " . $killer
 }
 }
 
-/*public function onRespawn(PlayerRespawnEvent $event){
+public function onRespawn(PlayerRespawnEvent $event){
 $old = microtime();
 $this->deathBan($ent, $old);
-}*/
+}
 
-/*public function onJoin(PlayerJoinEvent $event){
+public function onJoin(PlayerJoinEvent $event){
 $p = $event->getPlayer();
 $new = microtime();
 if($this->banExists($p)){
@@ -143,9 +143,9 @@ $this->undeathBan($p);
 $p->kick(TextFormat::RED . "Death banned.\nPlease wait untill your ban time is over.", false);
 }
 }
-}*/
+}
 
-/*public function onCommand(CommandSender $sender, Command $command, $label, array $args): bool {
+public function onCommand(CommandSender $sender, Command $command, $label, array $args): bool {
 switch(strtolower($command->getName())){
 case "addlive":
 if(isset($args[0])){
@@ -153,6 +153,6 @@ $p = $this->getServer()->getPlayer($args[0]);
 }
 break;
 }
-}*/
+}
 
 }
