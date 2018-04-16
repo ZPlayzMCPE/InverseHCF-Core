@@ -121,6 +121,7 @@ $event->setDeathMessage("ยงe" . $ent->getName() . " was slain by " . $killer
 }
 public function onRespawn(PlayerRespawnEvent $event){
 $old = microtime();
+$ent = $event->getEntity();
 $this->deathBan($ent, $old);
 }
 public function onJoin(PlayerJoinEvent $event){
