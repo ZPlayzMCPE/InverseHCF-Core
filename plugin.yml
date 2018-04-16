@@ -1,5 +1,5 @@
 name: HCF-Core
-main: main
+main: HCFDeaths\main
 version: 1.0.1
 api: [3.0.0-ALPHA11, 3.0.0-ALPHA12]
 author: Void
