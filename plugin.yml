@@ -1,6 +1,6 @@
 name: HCF-Core
 main: HCFDeaths\main
-version: 1.0.1
+version: 1.0.2
 api: [3.0.0-ALPHA11, 3.0.0-ALPHA12]
-author: Void
+author: VMPE Development Team.
 load: POSTWORLD
